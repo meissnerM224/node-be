@@ -1,0 +1,21 @@
+info:
+  name: logut
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/users/logout"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "marten.1@mail.conm"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

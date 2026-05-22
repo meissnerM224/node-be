@@ -1,0 +1,20 @@
+info:
+  name: deletePost
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{base_url}}/api/posts/delete/{{id}}"
+  auth: inherit
+
+runtime:
+  variables:
+    - name: id
+      value: 6a108541921b018ef840488d
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,18 +1,24 @@
 info:
-  name: logut
+  name: updatePost
   type: http
   seq: 3
 
 http:
-  method: POST
-  url: "{{base_url}}/api/users/logout"
+  method: PATCH
+  url: "{{base_url}}/api/posts/update/{{id}}"
   body:
     type: json
     data: |-
       {
-        "email": "marten.1@mail.conm"
+        "name":"updated"
+
       }
   auth: inherit
+
+runtime:
+  variables:
+    - name: id
+      value: 6a108550921b018ef840488e
 
 settings:
   encodeUrl: true

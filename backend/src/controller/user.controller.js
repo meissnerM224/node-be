@@ -56,6 +56,7 @@ const loginUser = async (req, res) => {
 const logoutUser = async (req, res) => {
   try {
     const { email } = req.body;
+    console.log(email);
     const user = await User.findOne({ email });
     console.log(user);
     if (!user) return res.status(404).json({ message: "User not found" });

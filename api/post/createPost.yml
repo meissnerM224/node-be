@@ -1,18 +1,18 @@
 info:
-  name: register
+  name: createPost
   type: http
   seq: 2
 
 http:
   method: POST
-  url: "{{base_url}}/api/users/register"
+  url: "{{base_url}}/api/posts/create"
   body:
     type: json
     data: |-
       {
-        "email": "marten.1@mail.conm",
-        "username": "marten",
-        "password": "passwort"
+        "name":"post2",
+        "description": "My second post",
+        "age":1
       }
   auth: inherit
 
