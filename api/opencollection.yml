@@ -1,7 +1,8 @@
 opencollection: 1.0.0
 
 info:
-  name: api
+  name: node-be-api
+  description: Bruno collection for the Node BE backend API
 bundled: false
 extensions:
   bruno:
